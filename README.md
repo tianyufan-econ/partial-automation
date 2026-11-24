@@ -18,4 +18,6 @@ occupations and their tasks.
 
 ## Status
 
-In preparation. The website and the data are not yet published.
+In preparation. The website and the data are not yet published. Until then,
+[partialautomation.org](https://partialautomation.org) shows a placeholder page, served by GitHub Pages
+from `docs/`.
