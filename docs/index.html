@@ -14,21 +14,28 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/Geist-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Unbounded-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-  :root { --bg: #f9f9f7; --ink: #0b0b0b; --ink-2: #52514e; --rule: rgba(11, 11, 11, 0.12);
-    --core: #1f6bc4; --peri: #eb6834; --on-core: #fff; --on-peri: #0b0b0b; color-scheme: light; }
+  /* Same typefaces and colors as the site (SIL Open Font License; see fonts/). */
+  @font-face { font-family: "Geist"; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url("fonts/Geist-latin-variable.woff2") format("woff2"); }
+  @font-face { font-family: "Unbounded"; font-style: normal; font-weight: 200 900; font-display: swap;
+    src: url("fonts/Unbounded-latin-variable.woff2") format("woff2"); }
+  :root { --bg: #faf7f0; --ink: #171916; --ink-2: #474b49; --rule: #d9d5cb;
+    --core: #185ba3; --peri: #ff8326; --on-core: #fff; --on-peri: #171916; color-scheme: light; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #0d0d0d; --ink: #f0efec; --ink-2: #c3c2b7; --rule: rgba(255, 255, 255, 0.12);
-      --core: #4d94ea; --peri: #d95926; --on-core: #0d0d0d; --on-peri: #0d0d0d; color-scheme: dark; }
+    :root { --bg: #15191e; --ink: #f5f1e8; --ink-2: #d3d7d8; --rule: #414950;
+      --core: #94c8ff; --peri: #ffa04e; --on-core: #15191e; --on-peri: #15191e; color-scheme: dark; }
   }
   * { box-sizing: border-box; }
   body { margin: 0; min-height: 100vh; display: flex; align-items: center; background: var(--bg); color: var(--ink);
-    font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  main { width: 100%; max-width: 760px; margin: 0 auto; padding: 48px 16px; }
-  .eyebrow { margin: 0; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); font-weight: 600; }
-  h1 { font-family: ui-serif, "Iowan Old Style", Palatino, Georgia, serif; font-weight: 500; font-size: clamp(30px, 5.4vw, 46px);
-    line-height: 1.12; letter-spacing: -0.01em; margin: 12px 0 0; }
-  .authors { margin: 14px 0 0; color: var(--ink-2); }
+    font: 17px/1.55 "Geist", system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { width: 100%; max-width: 860px; margin: 0 auto; padding: 48px 16px; }
+  .eyebrow { margin: 0; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); font-weight: 500; }
+  h1 { font-family: "Unbounded", "Geist", system-ui, sans-serif; font-weight: 300; font-size: clamp(28px, 5.6vw, 52px);
+    line-height: 1.12; letter-spacing: -0.025em; word-spacing: 0.06em; margin: 14px 0 0; text-wrap: balance; }
+  .authors { margin: 18px 0 0; color: var(--ink-2); }
   .lede { margin: 28px 0 0; max-width: 60ch; }
   .rg { display: inline-block; font-size: 14px; font-weight: 600; padding: 2px 10px; border-radius: 999px; white-space: nowrap; }
   .rg.core { background: var(--core); color: var(--on-core); } .rg.peri { background: var(--peri); color: var(--on-peri); }
@@ -39,8 +46,8 @@
 </head>
 <body>
 <main>
-  <p class="eyebrow">Partial automation</p>
-  <h1>A Theory of Partial Automation: Will Jobs be Commoditized or Winner-Take-All?</h1>
+  <p class="eyebrow">A Theory of Partial Automation</p>
+  <h1>Will jobs be commoditized or winner-take-all?</h1>
   <p class="authors">Tianyu Fan (Princeton) and Pascual Restrepo (Yale)</p>
   <p class="lede">When technology takes over part of a job, who gains depends on which part.</p>
   <p class="pair"><span class="rg core">Core → commoditization</span> <span class="rg peri">Periphery → winner-take-all</span></p>
